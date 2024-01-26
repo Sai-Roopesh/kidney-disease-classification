@@ -1,1 +1,8 @@
-key: val
+AUGMENTATION: True  # Data augmentation can help improve model performance by providing more varied data
+IMAGE_SIZE: [224, 224, 3]  # This is the standard input size for VGG16
+BATCH_SIZE: 32  # A larger batch size can make training faster, but it might also require more memory
+INCLUDE_TOP: False  # This depends on your task. If you're doing fine-tuning, it's common to exclude the top layers
+EPOCHS: 200  # This might be fine, but be careful of overfitting. You might want to use early stopping
+CLASSES: 4  # This depends on your task
+WEIGHTS: imagenet  # Pre-training on ImageNet is a common practice
+LEARNING_RATE: 0.001  # 0.01 might be too high. It's common to start with a smaller learning rate
